@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="product_names">
+        <item>Smartphone</item>
+        <item>Headphones</item>
+    </string-array>
+
+    <string-array name="price">
+        <item>500</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="product_descriptions">
+        <item>Remi note 11 with Ubuntu 6/128 NFC Spesn</item>
+        <item>JBL BAssBOOSTED 60mm driver 5 years long battery life</item>
+    </string-array>
+    <string-array name="product_images">
+        <item>@drawable/smartphone</item>
+        <item>@drawable/headphones</item>
+    </string-array>
+</resources>
