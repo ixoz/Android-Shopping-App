@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity3 extends AppCompatActivity {
+    private EditText quantityInput1, quantityInput2, quantityInput3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,9 @@ public class MainActivity3 extends AppCompatActivity {
         Button addToCartButton1 = findViewById(R.id.addToCartButton1);
         Button addToCartButton2 = findViewById(R.id.addToCartButton2);
         Button addToCartButton3 = findViewById(R.id.addToCartButton3);
-        EditText quantityInput1 = findViewById(R.id.quantityInput1);
-        EditText quantityInput2 = findViewById(R.id.quantityInput2);
-        EditText quantityInput3 = findViewById(R.id.quantityInput3);
+        quantityInput1 = findViewById(R.id.quantityInput1);
+        quantityInput2 = findViewById(R.id.quantityInput2);
+        quantityInput3 = findViewById(R.id.quantityInput3);
 
         String username = getIntent().getStringExtra("username");
         if (username != null && !username.isEmpty()) {
@@ -63,5 +65,14 @@ public class MainActivity3 extends AppCompatActivity {
         intent.putExtra("product_quantity", quantity);
         intent.putExtra("product_image", imgRes);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Reset quantity input fields when coming back
+        quantityInput1.setText("");
+        quantityInput2.setText("");
+        quantityInput3.setText("");
     }
 }
